@@ -1,58 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 /* Apply custom fonts */
-body {
+ body {
     font-family: 'Poppins', sans-serif;
 }
 
 h1, .font-heading {
     font-family: 'Roboto Slab', serif;
 }
-
-/* Background image and overlay styles */
-.background-container {
-    position: relative;
-    height: 170vh;
-    background-image: url('../assets/images/bg.jpg');
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+body{
+    min-height: 100vh;
 }
-
-@media (max-width: 1300px) {
-    .background-container {
-        height: 180vh;
-    }
-}
-
-@media (max-width: 1000px) {
-    .background-container {
-        height: 200vh;
-    }
-}
-
-
-@media (max-width: 770px) {
-    .background-container {
-        height: 320vh;
-    }
-}
-
-@media (max-width: 415px) {
-    .background-container {
-        height: 350vh;
-    }
-}
-
-
-
-
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-
-
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -95,7 +53,6 @@ h1, .font-heading {
 }
 
 @media (max-width: 768px) {
-    
     .hamburger {
         display: block;
         cursor: pointer;
@@ -103,7 +60,7 @@ h1, .font-heading {
         color: white;
     }
 
-    #nav {
+    #nav{
         display: none;
     }
 
@@ -111,11 +68,13 @@ h1, .font-heading {
         display: flex;
     }
 
-    #name {
+    #name{
         font-size: 20px;
     }
 }
 
+
+/* mobile menu */
 /* Mobile Menu styles */
 .mobile-menu {
     display: none;
@@ -169,10 +128,25 @@ h1, .font-heading {
 }
 
 @media (min-width: 768px) {
+    
     .hamburger {
         display: none;
     }
 }
+
+@media (max-width: 768px) {
+    .links
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4vh;
+    }
+    .background-container{
+        height: 200vh;
+    }
+}
+
 /* For Chrome, Edge, and Safari */
 ::-webkit-scrollbar {
     width: 8px; /* Set the width of the scrollbar */
@@ -192,3 +166,64 @@ h1, .font-heading {
     background-color: #555; /* Darken the thumb when hovered */
 }
 
+.HERO {
+    background-image: url("../assets/images/bg.jpg");
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.HERO::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Black overlay with 50% opacity */
+    z-index: 1;
+}
+
+.radial-progress {
+    --size: 6rem;
+    --thickness: 0.5rem;
+    --value: 0;
+    --color: white;
+  
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: conic-gradient(var(--color) calc(var(--value) * 1%), transparent 0);
+    position: relative;
+  }
+  
+  .radial-progress::before {
+    content: "";
+    position: absolute;
+    inset: calc(var(--thickness) / 2);
+    border-radius: 50%;
+    background-color: #4c1d95; /* background color to match */
+  }
+  
+  .radial-progress span {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color);
+  }
+  .ff1 {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-style: normal;
+  }
+  .ff2 {
+    font-family: "Anton", sans-serif;
+    font-style: normal;
+  }
+
+  #ham{
+    color: black;
+  }

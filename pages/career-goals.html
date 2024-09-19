@@ -11,111 +11,114 @@
     <title>Home</title>
 </head>
 
-<body>
+<body class="bg-purple-200 mx-4 sm:mx-3 md:mx-8 lg:mx-20 my-4 sm:my-6 md:my-8 lg:my-10">
+   
+    <div class="container bg-white border-8 border-black rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
+        <!-- Header -->
+             <header class="flex justify-between   mx-5 py-6">
+    <div class="name flex items-center gap-3 ">
+        <div class="circle w-6 h-6 rounded-full bg-purple-500"></div>
+        <div id="name" class="name text-sm md:text-lg lg:text-xl xl:text-2xl ff1 font-heading  text-black">Usman</div>
+    </div>
+
+    <!-- Hamburger Menu -->
+    <div id="ham" class="hamburger block md:hidden cursor-pointer text-black text-3xl" onclick="openMenu()">
+        &#9776;
+    </div>
+        <!-- Mobile Menu -->
     <div id="mobile-menu" class="mobile-menu">
         <span class="close-menu" onclick="closeMenu()">&times;</span>
         <nav class="flex flex-col items-center">
             <a href="../index.html">Home</a>
-            <a href="../pages/contact.html">Contact</a>
-            <a href="../pages/gallery.html">Gallery</a>
-            <a href="../pages/profile.html">Profile</a>
-            <a href="../pages/projects.html">Projects</a>
-            <a href="../pages/skill-interests.html">Skills</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./gallery.html">Gallery</a>
+            <a href="./profile.html">Profile</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./skill-interests.html">Skills</a>
         </nav>
     </div>
 
-    <!-- Background Container with Overlay -->
-    <div class="background-container" id="home-section">
-        <div class="overlay"></div>
-        
-        <!-- Content Wrapper -->
-        <div class="relative z-10">
-            <!-- Header -->
-            <header class="flex items-center justify-between mx-5 py-6">
-                <div class="name flex items-center gap-3 animate-bounce">
-                    <div class="circle w-6 h-6 rounded-full bg-purple-500"></div>
-                    <div id="name" class="name text-sm md:text-lg lg:text-xl xl:text-2xl font-heading  text-white">Usman</div>
-                </div>
+    <!-- Navbar -->
 
-                <!-- Hamburger Menu -->
-                <div class="hamburger" onclick="openMenu()">
-                    &#9776;
-                </div>
-
-                <!-- Navbar -->
-                <nav id="nav" class="flex flex-row justify-evenly w-full text-gray-700 text-lg">
-                    <a href="../index.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Home</a>
-                    <a href="../pages/contact.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Contact</a>
-                    <a href="../pages/gallery.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Gallery</a>
-                    <a href="../pages/profile.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Profile</a>
-                    <a href="../pages/projects.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Projects</a>
-                    <a href="../pages/skill-interests.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Skills</a>
-                </nav>
+    <nav id="nav" class="hidden md:flex flex-row justify-evenly w-full text-gray-700 text-lg">
+        <a class="text-black" href="../index.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Home</a>
+        <a class="text-black" href="./contact.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Contact</a>
+        <a class="text-black" href="./gallery.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Gallery</a>
+        <a class="text-black" href="./profile.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Profile</a>
+        <a class="text-black" href="./projects.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Projects</a>
+        <a class="text-black" href="./skill-interests.html" class="hover:text-purple-600 text-white hover:underline transition duration-300">Skills</a>
+    </nav>
             </header>
 
-            <!-- Main Content -->
-  <!-- Main Career Goals Section -->
-  <main class="text-center mt-10 mx-6 text-white">
-    <h2 class="text-white text-3xl font-bold mb-8">Career Goals</h2>
-    <!-- Short-Term Goals Section -->
-    <section id="short-term-goals" class="w-full md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg shadow-lg mb-10">
-        <h2 class="text-2xl font-heading mb-4">Short-Term Goals</h2>
-        <ul class="list-disc text-left pl-5 space-y-3">
-            <li>Enhance my knowledge of MERN stack development.</li>
-            <li>Build and contribute to open-source projects to strengthen my portfolio.</li>
-            <li>Expand my knowledge in mobile app development with React Native.</li>
-        </ul>
-    </section>
+            <!-- Main             -->
+            <main class="min-h-screen">
+                <!-- Background Image or Hero Banner -->
+                <div class="HERO bg-purple-100 hero-banner min-h-screen flex items-center justify-center relative">
+                    <div class="relative z-10 bg-opacity-70 p-10 rounded-lg">
+                        <h1 class="text-4xl md:text-5xl font-bold text-center ff2 font-heading text-gray-100 mb-8">Career Goals</h1>
+                        <!-- Short-Term Goals -->
+                        <section class="short-term-goals text-center my-8">
+                            <h2 class="text-3xl font-bold text-purple-600 mb-4 ">Short-Term Goals</h2>
+                            <p class="text-lg text-white">
+                                - Strengthen my expertise in full-stack development.<br>
+                                - Build more scalable web applications.<br>
+                                - Gain hands-on experience in cloud technologies.
+                            </p>
+                        </section>
+            
+                        <!-- Long-Term Goals -->
+                        <section class="long-term-goals text-center my-8">
+                            <h2 class="text-3xl font-bold text-purple-600 mb-4">Long-Term Goals</h2>
+                            <p class="text-lg text-white">
+                                - Lead innovative software development teams.<br>
+                                - Contribute to open-source projects at a global level.<br>
+                                - Become a thought leader in the software engineering community.
+                            </p>
+                        </section>
+            
+                        <!-- Call-to-Action -->
+                        <section class="call-to-action text-center my-8">
+                            <h2 class="text-3xl font-bold text-purple-600 mb-4">Call to Action</h2>
+                            <p class="text-lg text-white italic">
+                                "The future belongs to those who believe in the beauty of their dreams."
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </main>
+            
+       
 
-    <!-- Long-Term Goals Section -->
-    <section id="long-term-goals" class="w-full md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg shadow-lg mb-10">
-        <h2 class="text-2xl font-heading mb-4">Long-Term Goals</h2>
-        <ul class="list-disc text-left pl-5 space-y-3">
-            <li>Secure a senior software engineering role at a leading tech company.</li>
-            <li>Start my own tech startup and lead innovative projects.</li>
-            <li>Contribute to the developer community through mentorship and workshops.</li>
-        </ul>
-    </section>
-
-    <!-- Call-to-Action Section -->
-    <section id="call-to-action" class="w-full md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto backdrop-blur-md bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-heading mb-4">My Drive</h2>
-        <p class="text-lg quote font-mono">"Success is not final, failure is not fatal: It is the courage to continue that counts." – Winston Churchill</p>
-        <p class="mt-4 text-lg">I am dedicated to pushing boundaries and achieving my career goals, one step at a time.</p>
-    </section>
-</main>
-
-        </div>
-
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer py-4 text-center bg-slate-950 text-white">
-        <p>&copy; 2024 Usman Ghani. All rights reserved.</p>
-    </footer>
-
-    <!-- JavaScript -->
-    <script>
-        // Toggle the navigation menu
-        function openMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.add('active');
-        }
-
-        function closeMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.remove('active');
-        }
-
-        // Smooth scroll to next section
-        function scrollToNextSection() {
-            const nextSection = document.getElementById('next-section');
-            window.scrollTo({
-                top: nextSection.offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    </script>
-</body>
-
-</html>
+            
+                <!-- Footer -->
+                <footer class="footer py-4 text-center bg-slate-950 text-white">
+                    <p>&copy; 2024 Usman Ghani. All rights reserved.</p>
+                </footer>
+            </div>
+                <!-- JavaScript -->
+                <script>
+                    // Toggle the navigation menu
+                    function openMenu() {
+                        const menu = document.getElementById('mobile-menu');
+                        menu.classList.add('active');
+                    }
+            
+                    function closeMenu() {
+                        const menu = document.getElementById('mobile-menu');
+                        menu.classList.remove('active');
+                    }
+            
+                    // Smooth scroll to next section
+                    function scrollToNextSection() {
+                        const nextSection = document.getElementById('next-section');
+                        window.scrollTo({
+                            top: nextSection.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                </script>
+        
+    </body>
+            
+            </html>
+            
